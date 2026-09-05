@@ -1,0 +1,18 @@
+name: My CI Pipeline
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+
+      - name: Check website
+        run: |
+          test -f index.html
+          echo "Build/Test successful!"
