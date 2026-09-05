@@ -14,5 +14,5 @@ jobs:
 
       - name: Check website
         run: |
-          test -f index.html
+          test -f wrong.html
           echo "Build/Test successful!"
